@@ -1,0 +1,19 @@
+version: "3"
+services:
+  postgres1:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: shard1
+    ports:
+      - "5433:5432"
+
+  postgres2:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: shard2
+    ports:
+      - "5434:5432"
